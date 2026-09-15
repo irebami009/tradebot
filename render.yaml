@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: apex-trading-bot-api
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: MODE
+        value: PAPER
+      - key: EMERGENCY_STOP
+        value: "False"
+      - key: RISK_PER_TRADE
+        value: "0.01"
+      - key: MAX_DAILY_LOSS
+        value: "0.03"
+      - key: MAX_PORTFOLIO_EXPOSURE
+        value: "0.20"
+      - key: MIN_RISK_REWARD
+        value: "2.0"
+      - key: DECISION_CONFIDENCE_THRESHOLD
+        value: "75.0"
