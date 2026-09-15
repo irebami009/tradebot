@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/venv/
+backend/paper_trading.db
+.env
+
+# Node / React
+node_modules/
+frontend/dist/
+frontend/node_modules/
+.DS_Store
+
+# Data / IDE
+*.log
+.vscode/
+.idea/
